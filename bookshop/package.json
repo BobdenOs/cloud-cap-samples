@@ -17,7 +17,7 @@
   "scripts": {
     "genres": "cds serve test/genres.cds",
     "start": "cds run",
-    "watch": "cds watch"
+    "watch": "CDS_ENV=better-sqlite cds watch"
   },
   "cds": {
     "requires": {

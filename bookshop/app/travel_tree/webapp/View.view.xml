@@ -1,0 +1,48 @@
+<mvc:View
+    xmlns="sap.ui.table"
+    xmlns:m="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+
+    <TreeTable
+        id="treeTable"
+        visibleRowCount="100"
+        selectionMode="Single"
+        enableColumnReordering="false"
+        rows="{
+            path : '/GenresView',
+            parameters : {
+                countMode: 'Inline'
+            }
+        }">
+
+        <columns>
+
+            <Column label="Description">
+                <template>
+                    <m:Text text="{name}" wrapping="false" />
+                </template>
+            </Column>
+
+            <Column label="HierarchyLevel">
+                <template>
+                    <m:Text text="{level}" wrapping="false" />
+                </template>
+            </Column>
+
+            <Column label="NodeID">
+                <template>
+                    <m:Text text="{ID}" wrapping="false" />
+                </template>
+            </Column>
+
+            <Column label="ParentNodeID">
+                <template>
+                    <m:Text text="{parent}" wrapping="false" />
+                </template>
+            </Column>
+
+        </columns>
+
+    </TreeTable>
+
+</mvc:View>
