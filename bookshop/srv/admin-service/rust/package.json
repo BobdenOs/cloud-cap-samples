@@ -1,0 +1,14 @@
+{
+  "name": "bookshop",
+  "collaborators": [
+    "SAP CAP"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "admin_service_bg.wasm",
+    "admin_service.js",
+    "admin_service.d.ts"
+  ],
+  "main": "admin_service.js",
+  "types": "admin_service.d.ts"
+}

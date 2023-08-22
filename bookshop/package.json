@@ -17,9 +17,16 @@
     "express": "^4.17.1",
     "passport": ">=0.4.1"
   },
+  "cds": {
+    "requires": {
+      "db": "sql"
+    }
+  },
   "scripts": {
     "genres": "cds serve test/genres.cds",
-    "start": "cds run",
+    "build:c": "docker run --rm -v $(pwd):/src -u $(id -u):$(id -g) emscripten/emsdk emcc -lembind -sASYNCIFY -O3 srv/admin-service.cpp -o srv/admin-service/net/admin-service.js",
+    "build:rust": "wasm-pack build --reference-types --target nodejs --out-dir srv/admin-service/rust",
+    "start": "node --experimental-wasm-reftypes ../../../cds-dk/bin/cds run",
     "watch": "cds watch"
   }
 }

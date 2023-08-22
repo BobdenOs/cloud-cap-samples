@@ -22,3 +22,8 @@ reviews/db/test.db
 *.db
 
 **/@types
+
+**/*.rs.bk
+Cargo.lock
+bin/
+wasm-pack.log
